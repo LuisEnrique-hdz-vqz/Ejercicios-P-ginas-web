@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+
+@import url('https://unpkg.com/@uiw/reset.css/reset.css');
+
+h1 {
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+} 
+header{
+    background-color: rgb(88, 248, 253);
+}
+main{
+    background-color: rgb(241, 52, 210);
+}
+Aside{
+    background-color: rgb(246, 250, 38);
+}
+footer{
+    background-color: rgb(71, 197, 21);
+}
+/* DISEÑO RESPONSIVO CON MEDIA */
+
+@media (max-width: 600px) {
+     body {
+        background-color: rgb(27, 6, 148);
+    }
+    #container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        gap: 1rem;
+    }
+} 
+@media (min-width: 600px) {
+   body {
+        background-color: rgb(251, 212, 37);
+    }
+
+#container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 1rem;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "principal principal lado"
+    "pie pie pie"
+    ;
+}
+header{
+    grid-area: cabeza;
+}
+main{
+    grid-area: principal;
+}
+aside{
+    grid-area: lado;
+}
+footer{
+    grid-area: pie;
+}
+}
